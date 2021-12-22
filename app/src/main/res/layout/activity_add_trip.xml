@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTripActivity"
+    android:background="@drawable/background_color">
+
+    <RelativeLayout
+        android:id="@+id/cardView_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="24dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <EditText
+                    android:drawableLeft="@drawable/ic_baseline_fact_check_24"
+                    android:drawablePadding="10dp"
+                    android:id="@+id/TripID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:hint="Trip ID"
+                    android:padding="15dp"
+                    android:inputType="number"/>
+
+                <EditText
+                    android:drawableLeft="@drawable/ic_baseline_title_24"
+                    android:drawablePadding="10dp"
+                    android:id="@+id/TripName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:hint="Trip Name"
+                    android:padding="15dp"
+                    android:inputType="textPersonName"/>
+
+                <EditText
+                    android:drawableLeft="@drawable/ic_baseline_group_24"
+                    android:drawablePadding="10dp"
+                    android:id="@+id/MembersCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:hint="Group Size"
+                    android:padding="15dp"
+                    android:inputType="number"/>
+
+                <Button
+                    android:id="@+id/addTrip"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Add"
+                    android:textStyle="bold"
+                    android:backgroundTint="#563B87"
+                    android:layout_marginTop="20dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="5dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/background_color">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:src="@drawable/appicon" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</RelativeLayout>

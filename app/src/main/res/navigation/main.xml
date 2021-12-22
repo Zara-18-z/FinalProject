@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@+id/home">
+
+    <fragment
+        android:id="@+id/members"
+        android:name="com.example.expensetracker.MembersFragment"
+        android:label="Members"
+        tools:layout="@layout/fragment_members" />
+    <fragment
+        android:id="@+id/AddExpense"
+        android:name="com.example.expensetracker.AddExpenseFragment"
+        android:label="AddExpense"
+        tools:layout="@layout/fragment_add_expense" />
+    <fragment
+        android:id="@+id/Calculate"
+        android:name="com.example.expensetracker.CalculateFragment"
+        android:label="Calculate"
+        tools:layout="@layout/fragment_calculate" />
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.expensetracker.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+</navigation>

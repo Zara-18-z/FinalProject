@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculateFragment"
+    android:background="@drawable/fragments_background">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/bungee"
+        android:textColor="#563B87"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="100dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</RelativeLayout>

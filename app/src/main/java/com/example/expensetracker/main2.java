@@ -1,0 +1,53 @@
+package com.example.expensetracker;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.NavDestination;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toolbar;
+
+import com.google.android.material.navigation.NavigationView;
+
+public class main2 extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main2);
+
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+
+
+        findViewById(R.id.menu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+
+        NavigationView navigationView = findViewById(R.id.navigation_view);
+        navigationView.setItemIconTintList(null);
+
+        NavController navController = Navigation.findNavController(this, R.id.navHostFragment);
+        NavigationUI.setupWithNavController(navigationView, navController);
+
+        TextView textTitle = findViewById(R.id.Title);
+        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
+            @Override
+            public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
+                textTitle.setText(destination.getLabel());
+            }
+        });
+
+    }
+}
